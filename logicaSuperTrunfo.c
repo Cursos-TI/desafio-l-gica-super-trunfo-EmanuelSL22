@@ -44,16 +44,16 @@ int main() {
    {
    case 1:
     printf("Digite o Estado: \n");
-   scanf("%s", &estado);
+    scanf("%s", &estado);
 
-   printf("Digite o Código da carta: \n");
-   scanf("%s", &codigo);
+    printf("Digite o Código da carta: \n");
+    scanf("%s", &codigo);
 
-   printf("Digite o Nome: \n");
-   scanf("%s", &nome);
+    printf("Digite o Nome: \n");
+    scanf("%s", &nome);
 
-   printf("Digite a População: \n");
-   scanf("%u", &Populaçao);
+    printf("Digite a População: \n");
+    scanf("%u", &Populaçao);
 
    printf("Digite a Área: \n");
    scanf("%f", &Area);
@@ -121,9 +121,20 @@ int main() {
    Superpoder = (populaçao + area + pib + Percapita / Densidade);
    superpoder = (populaçao + area + pib + percapita / densidade);
 
+   printf("Ecolha uma comparação");
+   printf("1. população\n");
+   printf("2. área\n");
+   printf("3. pib\n");
+   printf("4. ponto turístico\n");
+   printf("5. densidade populacional\n");
+   printf("6. per capita\n");
+   printf("7. super poder\n");
+   scanf("%d", &opcao);
 
-
-    printf("\nCarta 1-População: %u\n", Populaçao);
+   switch (opcao)
+   {
+   case 1:
+     printf("\nCarta 1-População: %u\n", Populaçao);
     printf("Carta 2-População: %u\n", populaçao);
      if (Populaçao > populaçao)
     {
@@ -134,9 +145,9 @@ int main() {
     } else {
         printf("### Empate! ###\n");
     }
-    
-    
-    printf("\nCarta 1-Área: %.2f\n", Area);
+    break;
+   case 2:
+     printf("\nCarta 1-Área: %.2f\n", Area);
     printf("Carta 2-Área: %.2f\n", area);
     if (Area > area)
     {
@@ -147,10 +158,10 @@ int main() {
     } else {
         printf("### Empate! ###\n");
     }
-    
-    
-    printf("\nCarta 1-PIB: %.2f\n", Pib);
-    printf("Carta 2-PIB: %.2f\n", pib);
+    break;
+   case 3:
+     printf("\nCarta 1-PIB: %.2f\n", Pib);
+     printf("Carta 2-PIB: %.2f\n", pib);
     if (Pib > pib)
     {
         printf("Carta 1 %s venceu!\n", nome);
@@ -160,10 +171,10 @@ int main() {
     } else {
         printf("### Empate! ###\n");
     }
-    
-    
-    printf("\nCarta 1-Número de pontos turísticos: %d\n", pontoturistico);
-    printf("Carta 2-Número de pontos turísticos: %d\n", pontoturistico2);
+    break;
+   case 4:
+     printf("\nCarta 1-Número de pontos turísticos: %d\n", pontoturistico);
+     printf("Carta 2-Número de pontos turísticos: %d\n", pontoturistico2);
     if (pontoturistico > pontoturistico2)
     {
         printf("Carta 1 %s venceu!\n", nome);
@@ -173,10 +184,10 @@ int main() {
     } else {
         printf("### Empate! ###\n");
     }
-    
-    
-    printf("\nCarta 1-Densidade populacional: %.2f\n", Densidade);
-    printf("Carta 2-Densidade populacional: %.2f\n", densidade);
+    break;
+   case 5:
+     printf("\nCarta 1-Densidade populacional: %.2f\n", Densidade);
+     printf("Carta 2-Densidade populacional: %.2f\n", densidade);
     if (Densidade < densidade)
     {
         printf("Carta 1 %s venceu!\n", nome);
@@ -186,10 +197,10 @@ int main() {
     } else {
         printf("### Empate! ###\n");
     }
-    
-    
-    printf("\nCarta 1-Per Capita: %.2f\n", Percapita);
-    printf("Carta 2-Per Capita: %.2f\n", percapita);
+    break;
+   case 6:
+     printf("\nCarta 1-Per Capita: %.2f\n", Percapita);
+     printf("Carta 2-Per Capita: %.2f\n", percapita);
     if (Percapita > percapita)
     {
         printf("Carta 1 %s venceu!\n", nome);
@@ -199,8 +210,8 @@ int main() {
     } else {
         printf("### Empate! ###\n");
     }
-    
-    
+    break;
+   case 7:
     printf("\nCarta 1-Super Poder: %.2f\n", Superpoder);
     printf("Carta 2-Super Poder: %.2f\n", superpoder);
     if (Superpoder > superpoder)
@@ -212,7 +223,11 @@ int main() {
     } else {
         printf("### Empate! ###\n");
     }
-    
+    break;
+   default:
+    printf("Inválido!\n");
+    break;
+   }
 
     break;
    case 2:
