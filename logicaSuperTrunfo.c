@@ -18,8 +18,32 @@ int main() {
    float Densidade;
    float Percapita;
    float superpoder;
+   int opcao;
 
-   printf("Digite o Estado: \n");
+   int carta2;
+
+   char estado2[30];
+   char codigo2[10];
+   char nome2[50];
+   unsigned long int populaçao2;
+   float area2;
+   float pib2;
+   int pontoturistico2;
+   float densidade2;
+   float percapita2;
+   float superpoder2;
+
+   printf("$$$ SUPER TRUNFO! $$$\n");
+   printf("1. iniciar o Jogo $\n");
+   printf("2. Regras do Jogo #\n");
+   printf("3. Sair do Jogo!\n");
+   printf("Escolha uma opção: ");
+   scanf("%d", &opcao);
+
+   switch (opcao)
+   {
+   case 1:
+    printf("Digite o Estado: \n");
    scanf("%s", &estado);
 
    printf("Digite o Código da carta: \n");
@@ -56,19 +80,7 @@ int main() {
    printf("Densidade populacional: %.2f hab.Km²\n", Densidade);
    printf("PIB Per Capita: %.2f reais\n", Percapita);
 
-   int carta2;
-
-   char estado2[30];
-   char codigo2[10];
-   char nome2[50];
-   unsigned long int populaçao2;
-   float area2;
-   float pib2;
-   int pontoturistico2;
-   float densidade2;
-   float percapita2;
-   float superpoder2;
-
+  
    printf("Digite o Estado: \n");
    scanf("%s", &estado2);
 
@@ -109,8 +121,8 @@ int main() {
    superpoder = (populaçao + area + pib + Percapita / Densidade);
    superpoder2 = (populaçao2 + area2 + pib2 + percapita2 / densidade2);
 
-    printf("\nPopulação: %u\n", populaçao);
-    printf("População: %u\n", populaçao2);
+    printf("\nCarta 1-População: %u\n", populaçao);
+    printf("Carta 2-População: %u\n", populaçao2);
      if (populaçao > populaçao2)
     {
         printf("Carta 1 %s venceu!\n", nome);
@@ -118,8 +130,8 @@ int main() {
         printf("Carta 2 %s venceu!\n", nome2);
     }
     
-    printf("\nÁrea: %.2f\n", area);
-    printf("Área: %.2f\n", area2);
+    printf("\nCarta 1-Área: %.2f\n", area);
+    printf("Carta 2-Área: %.2f\n", area2);
     if (area > area2)
     {
         printf("Carta 1 %s venceu!\n", nome);
@@ -127,8 +139,8 @@ int main() {
         printf("Carta 2 %s venceu!\n",nome2);
     }
     
-    printf("\nPIB: %.2f\n", pib);
-    printf("PIB: %.2f\n", pib2);
+    printf("\nCarta 1-PIB: %.2f\n", pib);
+    printf("Carta 2-PIB: %.2f\n", pib2);
     if (pib > pib2)
     {
         printf("Carta 1 %s venceu!\n", nome);
@@ -136,8 +148,8 @@ int main() {
         printf("Carta 2 %s venceu!\n", nome2);
     }
     
-    printf("\nNúmero de pontos turísticos: %d\n", pontoturistico);
-    printf("Número de pontos turísticos: %d\n", pontoturistico2);
+    printf("\nCarta 1-Número de pontos turísticos: %d\n", pontoturistico);
+    printf("Carta 2-Número de pontos turísticos: %d\n", pontoturistico2);
     if (pontoturistico > pontoturistico2)
     {
         printf("Carta 1 %s venceu!\n", nome);
@@ -145,8 +157,8 @@ int main() {
         printf("Carta 2 %s venceu!\n", nome2);
     }
     
-    printf("\nDensidade populacional: %.2f\n", Densidade);
-    printf("Densidade populacional: %.2f\n", densidade2);
+    printf("\nCarta 1-Densidade populacional: %.2f\n", Densidade);
+    printf("Carta 2-Densidade populacional: %.2f\n", densidade2);
     if (Densidade < densidade2)
     {
         printf("Carta 1 %s venceu!\n", nome);
@@ -154,8 +166,8 @@ int main() {
         printf("Carta 2 %s venceu!\n", nome2);
     }
     
-    printf("\nPer Capita: %.2f\n", Percapita);
-    printf("Per Capita: %.2f\n", percapita2);
+    printf("\nCarta 1-Per Capita: %.2f\n", Percapita);
+    printf("Carta 2-Per Capita: %.2f\n", percapita2);
     if (Percapita > percapita2)
     {
         printf("Carta 1 %s venceu!\n", nome);
@@ -163,14 +175,33 @@ int main() {
         printf("Carta 2 %s venceu!\n", nome2);
     }
     
-    printf("\nSuper Poder: %.2f\n", superpoder);
-    printf("Super Poder: %.2f\n", superpoder2);
+    printf("\nCarta 1-Super Poder: %.2f\n", superpoder);
+    printf("Carta 2-Super Poder: %.2f\n", superpoder2);
     if (superpoder > superpoder2)
     {
         printf("Carta 1 %s venceu!\n", nome);
     } else {
         printf("Carta 2 %s venceu!\n", nome2);
     }
+
+    break;
+   case 2:
+    printf("\nRegras do SUPER TRUNFO\n");
+    printf("O jogo baseia-se na comparação dos valores de sua carta com a dos outros jogadores.\n");
+    printf("O maior valor escolhido ou menor (em alguns casos) vence!\n");
+    break;
+   case 3:
+    printf("Saindo do jogo... :C\n");
+    break;
+   
+   default:
+    printf("ESCOLHA INVÁLIDA!!!!!!!!!\n");
+    break;
+   }
+
+
+
+   
 
 
     
